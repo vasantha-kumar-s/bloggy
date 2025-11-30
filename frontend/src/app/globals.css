@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+:root {
+  --bg-primary: #fff9f7;
+  --bg-secondary: #fff0ed;
+  --bg-card: #ffffff;
+  --text-primary: #000000;
+  --text-secondary: #1a1a1a;
+  --text-muted: #333333;
+  --accent-primary: #f5a097;
+  --accent-secondary: #ffb4a2;
+  --accent-tertiary: #ffc4b8;
+  --border-color: #ffd5cc;
+  --border-dark: #f5a097;
+}
+
+@theme inline {
+  --color-background: var(--bg-primary);
+  --color-foreground: var(--text-primary);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+}
+
+::selection {
+  background: var(--accent-secondary);
+  color: var(--text-primary);
+}
+
+input, textarea, button {
+  font-family: inherit;
+}
+
+input:focus, textarea:focus {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 1px;
+}
